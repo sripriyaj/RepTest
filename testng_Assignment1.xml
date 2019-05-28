@@ -3,8 +3,9 @@
 <suite name="Suite">
   <test name="Test">
   <classes>
-  <class name="Assignment1_DynamicRows">
-   <parameter name="username" value="ria" />
+  <!-- added package name as well -->
+  <class name="mmp.assignment.one.Assignment1_DynamicRows">
+   <parameter name="username" value="ria1" />
         <parameter name="password" value="Ria12345" /></class>
   </classes>
   </test> <!-- Test -->
