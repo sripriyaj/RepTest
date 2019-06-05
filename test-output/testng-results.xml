@@ -1,17 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="1" failed="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45442" started-at="2019-06-05T00:10:47Z" finished-at="2019-06-05T00:11:33Z">
+  <suite name="Default suite" duration-ms="44866" started-at="2019-06-05T00:27:59Z" finished-at="2019-06-05T00:28:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45442" started-at="2019-06-05T00:10:47Z" finished-at="2019-06-05T00:11:33Z">
+    <test name="Default test" duration-ms="44866" started-at="2019-06-05T00:27:59Z" finished-at="2019-06-05T00:28:44Z">
       <class name="mmp.assignment.one.Assignment1_DynamicRows">
-        <test-method status="PASS" signature="TC001_ColCountValidation()[pri:0, instance:mmp.assignment.one.Assignment1_DynamicRows@6093dd95]" name="TC001_ColCountValidation" duration-ms="23933" started-at="2019-06-04T17:10:47Z" finished-at="2019-06-04T17:11:11Z">
+        <test-method status="PASS" signature="TC001_ColCountValidation()[pri:0, instance:mmp.assignment.one.Assignment1_DynamicRows@6093dd95]" name="TC001_ColCountValidation" duration-ms="22314" started-at="2019-06-04T17:27:59Z" finished-at="2019-06-04T17:28:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC001_ColCountValidation -->
-        <test-method status="PASS" signature="TC002_ColDataValidation()[pri:0, instance:mmp.assignment.one.Assignment1_DynamicRows@6093dd95]" name="TC002_ColDataValidation" duration-ms="21481" started-at="2019-06-04T17:11:11Z" finished-at="2019-06-04T17:11:33Z">
+        <test-method status="SKIP" signature="TC002_ColCountValidationParam(java.lang.String, java.lang.String)[pri:0, instance:mmp.assignment.one.Assignment1_DynamicRows@6093dd95]" name="TC002_ColCountValidationParam" duration-ms="0" started-at="2019-06-04T17:28:22Z" finished-at="2019-06-04T17:28:22Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'username' is required by @Test on method TC002_ColCountValidationParam but has not been marked @Optional or defined
+in C:\Users\SriPriya\AppData\Local\Temp\testng-eclipse--2012235883\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'username' is required by @Test on method TC002_ColCountValidationParam but has not been marked @Optional or defined
+in C:\Users\SriPriya\AppData\Local\Temp\testng-eclipse--2012235883\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:156)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:363)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:488)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1240)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:980)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1070)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:746)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+	at org.testng.TestNG.runSuites(TestNG.java:1104)
+	at org.testng.TestNG.run(TestNG.java:1076)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC002_ColCountValidationParam -->
+        <test-method status="PASS" signature="TC002_ColDataValidation()[pri:0, instance:mmp.assignment.one.Assignment1_DynamicRows@6093dd95]" name="TC002_ColDataValidation" duration-ms="22518" started-at="2019-06-04T17:28:22Z" finished-at="2019-06-04T17:28:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC002_ColDataValidation -->

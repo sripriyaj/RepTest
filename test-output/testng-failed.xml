@@ -5,7 +5,7 @@
     <classes>
       <class name="mmp.assignment.one.Assignment1_DynamicRows">
         <methods>
-          <include name="TC001_ColCountValidation"/>
+          <include name="TC002_ColCountValidationParam"/>
         </methods>
       </class> <!-- mmp.assignment.one.Assignment1_DynamicRows -->
     </classes>

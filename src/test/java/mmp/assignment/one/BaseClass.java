@@ -47,16 +47,6 @@ public class BaseClass {
 	}
 	
 	
-	/*Validating login credentials using parameterization*/
-	@Parameters({"username","password"})
-	public void credentialValidationParam(String username,String password) throws InterruptedException
-	{		
-		driver.findElement(By.xpath("//input[@id='username']")).sendKeys(username);
-		driver.findElement(By.xpath("//input[@id='password']")).sendKeys(password);
-		driver.findElement(By.xpath("//input[@name='submit']")).click();
-		
-	}
-	
 
 	
 	public void tearDrop() {

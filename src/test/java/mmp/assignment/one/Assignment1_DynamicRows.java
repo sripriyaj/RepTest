@@ -36,19 +36,23 @@ public class Assignment1_DynamicRows extends BaseClass {
 		
 	}
 	
-	/*
+	
 	@Parameters({"username","password" })
 	@Test
 	public void TC002_ColCountValidationParam(String username,String password) throws InterruptedException  {
 		
 		launchBrowser();
 		HomePage hp=new HomePage(driver);
-		credentialValidationParam( username, password);
+		LoginPage lp=new LoginPage(driver);
+		lp.credentialValidationParam(username, password);
 		hp.colCountCheck();
+		String expected="home";
+		String act=lp.credentialValidationParam(username, password);
+		Assert.assertEquals(expected, act);
 		
 	}
 	
-	*/
+	
 	
 	
 	

@@ -20,7 +20,6 @@ public class HomePage {
 	/* Validating column count */
 	public int colCountCheck() {
 		List<WebElement> list = driver.findElements(By.tagName("th"));
-		System.out.println("Col size is   " + list.size());
 		// String[] expected= {"Doctor","Date","Appointment","Time"};
 		int actual=list.size();
 		return actual;
@@ -40,9 +39,7 @@ public class HomePage {
 			if (actual.contains(expected)) {
 				result = true;
 				break;
-
 			}
-
 		}
 		return result;
 	}

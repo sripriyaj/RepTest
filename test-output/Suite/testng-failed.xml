@@ -7,7 +7,6 @@
         <parameter name="password" value="Ria12345"/>
         <parameter name="username" value="ria1"/>
         <methods>
-          <include name="TC001_ColCountValidation"/>
           <include name="TC002_ColCountValidationParam" invocation-numbers="0"/>
         </methods>
       </class> <!-- mmp.assignment.one.Assignment1_DynamicRows -->

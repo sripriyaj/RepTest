@@ -5,6 +5,8 @@
   <classes>
   <!-- added package name as well -->
   <class name="mmp.assignment.one.Assignment1_DynamicRows">
+ <!-- <class name="mmp.assignment.one.LoginPage">-->
+ 
    <parameter name="username" value="ria1" />
         <parameter name="password" value="Ria12345" /></class>
   </classes>
