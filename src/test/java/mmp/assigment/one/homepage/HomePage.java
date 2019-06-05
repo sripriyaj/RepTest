@@ -9,31 +9,42 @@ import org.openqa.selenium.WebElement;
 import junit.framework.Assert;
 
 public class HomePage {
-	
-	
-	WebDriver driver;  
+
+	WebDriver driver;
+
 	public HomePage(WebDriver driver) {
-		this.driver=driver;
-		
+		this.driver = driver;
+
 	}
 
-	/*Validating column count */
-	public void colCountCheck() {
+	/* Validating column count */
+	public int colCountCheck() {
 		List<WebElement> list = driver.findElements(By.tagName("th"));
 		System.out.println("Col size is   " + list.size());
-		//String[] expected= {"Doctor","Date","Appointment","Time"};
-		String expected="Time";
-		String actual = "";
-		for (WebElement webElement : list) {			
-			actual=webElement.getText();		
-		}
-		//Assert.assertTrue(actual.contains("Time"));
+		// String[] expected= {"Doctor","Date","Appointment","Time"};
+		int actual=list.size();
+		return actual;
+	}
+	
+	/* Col data check*/
+	public boolean colDataCheck() {
 		
-		boolean result = actual.contains(expected) ;
+		List<WebElement> list = driver.findElements(By.tagName("th"));
+		// String[] expected= {"Doctor","Date","Appointment","Time"};
+		
+		String expected = "Time";
+		boolean result = false;
 
-		Assert.assertTrue(result);
+		for (WebElement webElement : list) {
+			String actual = webElement.getText();
+			if (actual.contains(expected)) {
+				result = true;
+				break;
 
+			}
+
+		}
+		return result;
 	}
 
-	
 }

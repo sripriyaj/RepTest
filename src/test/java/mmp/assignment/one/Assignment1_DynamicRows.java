@@ -1,5 +1,6 @@
 package mmp.assignment.one;
 
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -11,12 +12,31 @@ public class Assignment1_DynamicRows extends BaseClass {
 	public void TC001_ColCountValidation() throws InterruptedException  {
 		
 		launchBrowser();
-		HomePage hp=new HomePage(driver);
-		credentialValidation();
-		hp.colCountCheck();
+		HomePage hp=new HomePage(driver);		
+		LoginPage lp=new LoginPage(driver);
+		lp.credentialValidation();
+		//hp.colCountCheck();
+		int expected =5;
+		int act=hp.colCountCheck();
+		Assert.assertEquals(expected, act);
+	
+	}
+	
+	@Test
+	public void TC002_ColDataValidation() throws InterruptedException {
+		launchBrowser();
+		HomePage hp=new HomePage(driver);		
+		LoginPage lp=new LoginPage(driver);
+		lp.credentialValidation();
+		hp.colDataCheck();
+		boolean result=hp.colDataCheck();
+		Assert.assertTrue(result);
+		
+		
 		
 	}
 	
+	/*
 	@Parameters({"username","password" })
 	@Test
 	public void TC002_ColCountValidationParam(String username,String password) throws InterruptedException  {
@@ -28,7 +48,7 @@ public class Assignment1_DynamicRows extends BaseClass {
 		
 	}
 	
-	
+	*/
 	
 	
 	

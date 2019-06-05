@@ -9,12 +9,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Parameters;
+
 import io.github.bonigarcia.wdm.*;
 
 import junit.framework.Assert;
 
 public class BaseClass {
 
+	//private static final String[] String username = null;
 	public WebDriver driver;
 	WebElement element;
 	
@@ -43,16 +46,9 @@ public class BaseClass {
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
-	/*Validating login credentials*/
-	public void credentialValidation() throws InterruptedException
-	{		
-		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("ria1");
-		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Ria12345");
-		driver.findElement(By.xpath("//input[@name='submit']")).click();
-		
-	}
 	
 	/*Validating login credentials using parameterization*/
+	@Parameters({"username","password"})
 	public void credentialValidationParam(String username,String password) throws InterruptedException
 	{		
 		driver.findElement(By.xpath("//input[@id='username']")).sendKeys(username);
@@ -62,24 +58,8 @@ public class BaseClass {
 	}
 	
 
-	/*
-	//Validating column count 
-	public void colCountCheck() {
-		List<WebElement> list = driver.findElements(By.tagName("th"));
-		System.out.println("Col size is   " + list.size());
-		//String[] expected= {"Doctor","Date","Appointment","Time"};
-		String expected="Time";
-		String actual = "";
-		for (WebElement webElement : list) {			
-			actual=webElement.getText();		
-		}
-		//Assert.assertTrue(actual.contains("Time"));
-		
-		boolean result = actual.contains(expected) ;
-
-		Assert.assertTrue(result);
-
-	}
 	
-	*/
+	public void tearDrop() {
+		//driver.close();
+	}
 }
